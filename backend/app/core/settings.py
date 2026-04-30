@@ -29,10 +29,18 @@ class Settings(BaseSettings):
     celery_broker_url: str = "redis://localhost:6379/1"
     celery_result_backend: str = "redis://localhost:6379/2"
 
-    # AI
+    # AI — Anthropic
     anthropic_api_key: str = ""
     claude_model: str = "claude-sonnet-4-6"
     claude_max_tokens: int = 8192
+
+    # AI — OpenAI
+    openai_api_key: str = ""
+
+    # Pipeline defaults
+    default_model_alias: str = "claude-sonnet"  # key in ai/registry.py MODELS dict
+    pipeline_chunk_size: int = 8000             # chars per chunk
+    pipeline_chunk_overlap: int = 800           # overlap chars
 
     # JWT
     jwt_secret_key: str = "change-me-jwt-secret"
