@@ -84,6 +84,46 @@ GET /health
 GET /docs
 ```
 
+APIs principais:
+
+```text
+GET    /projects
+POST   /projects
+GET    /projects/{id}
+PUT    /projects/{id}
+DELETE /projects/{id}
+
+GET    /files
+POST   /files
+GET    /files/{id}
+PUT    /files/{id}
+DELETE /files/{id}
+
+GET    /briefing
+POST   /briefing
+GET    /briefing/{id}
+PUT    /briefing/{id}
+DELETE /briefing/{id}
+
+GET    /prd
+POST   /prd
+GET    /prd/{id}
+PUT    /prd/{id}
+DELETE /prd/{id}
+
+GET    /book
+POST   /book
+GET    /book/{id}
+PUT    /book/{id}
+DELETE /book/{id}
+
+GET    /export
+POST   /export
+GET    /export/{id}
+PUT    /export/{id}
+DELETE /export/{id}
+```
+
 Exemplo de health check:
 
 ```bash
