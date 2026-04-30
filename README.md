@@ -65,6 +65,31 @@ docker compose up -d
 # Frontend: http://localhost:5173
 ```
 
+## Execucao do Backend
+
+Para executar somente a API em ambiente local:
+
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Endpoints iniciais:
+
+```text
+GET /health
+GET /docs
+```
+
+Exemplo de health check:
+
+```bash
+curl http://localhost:8000/health
+```
+
 ## Licença
 
 Proprietário — Raja Khalil © 2026
