@@ -1,0 +1,19 @@
+import { clsx } from "clsx";
+
+interface SpinnerProps {
+  size?: "sm" | "md" | "lg";
+  className?: string;
+}
+
+export function Spinner({ size = "md", className }: SpinnerProps) {
+  return (
+    <span
+      className={clsx(
+        "inline-block animate-spin rounded-full border-2 border-current border-t-transparent",
+        { "h-3 w-3": size === "sm", "h-5 w-5": size === "md", "h-8 w-8": size === "lg" },
+        className
+      )}
+      aria-label="Carregando"
+    />
+  );
+}
